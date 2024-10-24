@@ -1,0 +1,32 @@
+- Các tính năng có trong đặt lịch hẹn
+	- Đăng nhập
+		- Tên người dùng
+		- Mật khẩu
+	- Đăng ký	
+		- Họ và tên
+		- Ảnh đại diện
+		- Ngày tháng năm sinh
+		- Nghề nghiệp
+		- Tổ chức
+		- Tên người dùng
+		- Email
+		- Mật khẩu
+		- Một option ở bên dưới chứa đường dẫn tới trang thu thập dữ liệu
+	- Đặt lịch hẹn
+		- Trang danh sách phòng ban
+			- Mỗi phòng ban có một nút call to action : Đặt lịch hẹn
+		- Sau khi nhấn vào, chuyển đến một trang form liên hệ bao gồm :
+			- ( Thông tin người dùng sẽ tự động được gửi theo )
+			- Lựa chọn thời gian hẹn : Ngày, giờ ( Mỗi phòng ban sẽ có một thời gian làm việc trong tuần khác nhau )
+			- Lựa chọn người muốn hẹn ( Mỗi phòng ban sẽ cung cấp dữ liệu các nhân viên trong phòng ban, bao gồm Họ và tên, chức vụ, số điện thoại, 				telegram chatid )
+			- Mục đích hẹn
+			- Ghi chú
+		- Tối ưu lịch hẹn 
+			- Cảnh báo trùng lịch hẹn
+	- Xem các lịch hẹn của tôi
+	- Cho phép sửa lại lịch hẹn ( Sau khi sửa sẽ gửi lại tin nhắn mới tới bên được hẹn )
+	- Cho phép hủy lịch hẹn
+	- Nhắc nhở người dùng sắp đến hẹn ( Nâng cao )
+	- Các lịch hẹn đã qua ( Nâng cao )
+	- Quản lý profile người dùng ( Nâng cao )
+	- Tích hợp vào Google Calendar ( Siêu nâng cao )

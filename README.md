@@ -1,6 +1,5 @@
 # 1. About
-- A simple project base for React and Shadcn. Which include some common Shadcn components and Reusable Charts
-- NextJS is not used here
+- A page that help guest book appointment for Kiosk Receptionist system
 
 # 2. Libraries 
 - React
@@ -12,7 +11,7 @@
 # 2. Project structrue
 
 ```
-└── 📁my_simple_react_shadcn_base
+└── 📁Kiosk_Appointment_Booking
     └── 📁public
     └── 📁src
         └── 📁assets

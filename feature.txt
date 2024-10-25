@@ -15,10 +15,10 @@
 	- Đặt lịch hẹn
 		- Trang danh sách phòng ban
 			- Mỗi phòng ban có một nút call to action : Đặt lịch hẹn
-		- Sau khi nhấn vào, chuyển đến một trang form liên hệ bao gồm :
+		- Sau khi nhấn vào, hiển thị drawer liên hệ bao gồm :
 			- ( Thông tin người dùng sẽ tự động được gửi theo )
 			- Lựa chọn thời gian hẹn : Ngày, giờ ( Mỗi phòng ban sẽ có một thời gian làm việc trong tuần khác nhau )
-			- Lựa chọn người muốn hẹn ( Mỗi phòng ban sẽ cung cấp dữ liệu các nhân viên trong phòng ban, bao gồm Họ và tên, chức vụ, số điện thoại, 				telegram chatid )
+			- Lựa chọn người muốn hẹn ( Mỗi phòng ban sẽ cung cấp dữ liệu các nhân viên trong phòng ban, bao gồm Họ và tên, chức vụ, số điện thoại, telegram chatid )
 			- Mục đích hẹn
 			- Ghi chú
 		- Tối ưu lịch hẹn 

@@ -5,8 +5,8 @@ export const departmentList = [
     name: "Ban lãnh đạo",
     description: "",
     headOfDepartment: "Ngô Quốc Dũng",
-    workingDays: [2 - 7],
-    workingHours: [8 - 17.3],
+    workingDays: [2, 7],
+    workingHours: [8, 17.3],
     staffs: [
       {
         id: 1,
@@ -32,8 +32,8 @@ export const departmentList = [
     name: "Phòng Tổng hợp",
     description: "",
     headOfDepartment: "Vũ Thị Lan Hương",
-    workingDays: [2 - 7],
-    workingHours: [8 - 17.3],
+    workingDays: [2, 7],
+    workingHours: [8, 17.3],
     staffs: [
       {
         id: 1,
@@ -83,8 +83,8 @@ export const departmentList = [
     name: "Phòng Khoa học công nghệ và kế hoạch kinh doanh",
     description: "",
     headOfDepartment: "Vũ Hồng Sơn",
-    workingDays: [2 - 7],
-    workingHours: [8 - 17.3],
+    workingDays: [2, 7],
+    workingHours: [8, 17.3],
     staffs: [
       {
         id: 1,
@@ -126,8 +126,8 @@ export const departmentList = [
     name: "Phòng Tư vấn thiết kế",
     description: "",
     headOfDepartment: "Thái Minh Quân",
-    workingDays: [2 - 7],
-    workingHours: [8 - 17.3],
+    workingDays: [2, 7],
+    workingHours: [8, 17.3],
     staffs: [
       {
         id: 1,
@@ -161,8 +161,8 @@ export const departmentList = [
     name: "Phòng Đo lường kiểm định và tiêu chuẩn chất lượng",
     description: "",
     headOfDepartment: "Đào Đức Dương",
-    workingDays: [2 - 7],
-    workingHours: [8 - 17.3],
+    workingDays: [2, 7],
+    workingHours: [8, 17.3],
     staffs: [
       {
         id: 1,
@@ -188,8 +188,8 @@ export const departmentList = [
     name: "Phòng Ứng dụng và chuyển giao công nghệ",
     description: "",
     headOfDepartment: "Nguyễn Việt Dũng",
-    workingDays: [2 - 7],
-    workingHours: [8 - 17.3],
+    workingDays: [2, 7],
+    workingHours: [8, 17.3],
     staffs: [
       {
         id: 1,
@@ -239,8 +239,8 @@ export const departmentList = [
     name: "Phòng Nghiên cứu phát triển công nghệ số",
     description: "",
     headOfDepartment: "Đặng Anh Tuấn",
-    workingDays: [2 - 7],
-    workingHours: [8 - 17.3],
+    workingDays: [2, 7],
+    workingHours: [8, 17.3],
     staffs: [
       {
         id: 1,

@@ -25,7 +25,7 @@ const AuthNavBar = () => {
           variant="outline"
           size="icon"
           aria-label="Logo"
-          className="group p-4 sm:p-6 border-transparent text-indigo-500 hover:text-white hover:bg-indigo-500 w-fit font-clash"
+          className="group p-4 sm:p-6 border-transparent text-indigo-400 hover:text-white hover:bg-indigo-400 w-fit font-clash"
           onClick={() => navigate("/")}
           icon={
             <motion.div
@@ -37,7 +37,7 @@ const AuthNavBar = () => {
               animate="initial"
               className="group-hover:[&>*]:animate-[spin_0.5s_ease-in-out]"
             >
-              <Sparkles className="fill-indigo-500 group-hover:fill-white" />
+              <Sparkles className="fill-indigo-400 group-hover:fill-white" />
             </motion.div>
           }
           iconPosition="center"

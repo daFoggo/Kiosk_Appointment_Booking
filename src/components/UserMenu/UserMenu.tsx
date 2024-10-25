@@ -53,7 +53,7 @@ export default function UserMenu() {
       <motion.div variants={itemVariants}>
         <Link to="/auth/sign-in">
           <Button
-            className="p-2 sm:px-4 sm:py-6 text-sm sm:text-base bg-indigo-500 text-white hover:text-white/90 hover:bg-indigo-400"
+            className="p-2 sm:px-4 sm:py-6 text-sm sm:text-base bg-indigo-400 text-white hover:text-white/90 hover:bg-indigo-300"
             icon={<MoveRight className="h-4 w-4" />}
             iconPosition="right"
           >

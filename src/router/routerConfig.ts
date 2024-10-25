@@ -4,7 +4,7 @@ const routes = {
     signUp: 'sign-up',
     myAppointments: 'my-appointments',
     myProfile: 'my-profile',
-    deparmentList: 'deparment-list',
+    deparmentList: 'department-list',
     makeNewAppointment: 'make-new-appointment',
 }
 

@@ -1,28 +1,30 @@
 import { Outlet } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import AuthNavBar from "@/components/AuthNavBar/AuthNavBar";
+import RootFooter from "@/components/RootFooter/RootFooter";
 
-const AuthLayout = () => {
+const RootLayout = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="z-10">
+    <div className="flex flex-col min-h-screen min-w-full bg-gray-100">
+      <header className="z-10 p-2 sm:p-4">
         <AuthNavBar />
       </header>
-      <main className="flex-grow">
+      <main className="flex-grow p-2 sm:p-4">
         <Outlet />
         <Toaster
           toastOptions={{
             style: {
-              color: "#4893f4"
+              color: "#4893f4",
             },
           }}
           position="top-center"
         />
       </main>
       <footer className="z-10">
+        <RootFooter />
       </footer>
     </div>
   );
 };
 
-export default AuthLayout;
+export default RootLayout;

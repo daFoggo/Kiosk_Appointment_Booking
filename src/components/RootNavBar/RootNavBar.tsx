@@ -65,7 +65,7 @@ const RootNavBar = () => {
       </motion.div>
 
       {/* Right side */}
-      <motion.div variants={rightSideVariants} className="flex space-x-4">
+      <motion.div variants={rightSideVariants} className="flex space-x-4 items-center">
         <div className="hidden sm:flex sm:items-center sm:space-x-4">
           <Button
             className="px-4 py-6 text-base font-semibold bg-indigo-100 border-indigo-500 border-2 text-indigo-500 hover:text-indigo-400 hover:bg-indigo-200 hover:border-indigo-400"

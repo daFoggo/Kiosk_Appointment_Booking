@@ -18,7 +18,7 @@ const routeLayout: RouteObject[] = [
     children: [
       {
         path: routes.home,
-        element: <Home />,
+        element: <MyAppointments />,
       },
       {
         path: routes.myAppointments,
@@ -35,7 +35,7 @@ const routeLayout: RouteObject[] = [
       {
         path: routes.myProfile,
         element: <MyProfile />,
-      }
+      },
     ],
   },
   {

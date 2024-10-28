@@ -80,15 +80,17 @@ const RootNavBar = () => {
         variants={rightSideVariants}
         className="flex space-x-4 items-center"
       >
-        <div className="hidden sm:flex sm:items-center sm:space-x-4">
-          <Button
-            className="px-4 py-6 text-base font-semibold bg-white text-gray-500 hover:text-white hover:bg-indigo-400"
-            icon={<CalendarPlus className="w-4 h-4" />}
-            onClick={() => navigate("/department-list")}
-          >
-            Thêm lịch hẹn mới
-          </Button>
-        </div>
+        {location.pathname !== "/department-list" && (
+          <div className="hidden sm:flex sm:items-center sm:space-x-4">
+            <Button
+              className="px-4 py-6 text-base font-semibold bg-white text-gray-500 hover:text-white hover:bg-indigo-400"
+              icon={<CalendarPlus className="w-4 h-4" />}
+              onClick={() => navigate("/department-list")}
+            >
+              Thêm lịch hẹn mới
+            </Button>
+          </div>
+        )}
         <UserMenu />
       </motion.div>
     </motion.div>

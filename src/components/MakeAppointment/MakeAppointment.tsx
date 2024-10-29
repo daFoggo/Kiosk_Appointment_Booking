@@ -157,36 +157,43 @@ export function MakeAppointment(department: IDepartMentCardProps) {
                   </FormItem>
                 )}
               />
-              <FormField
-                control={form.control}
-                name="purpose"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Mục đích hẹn</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Nhập mục đích hẹn" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="notes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Ghi chú</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Nhập ghi chú nếu có"
-                        className="resize-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              <div className="flex flex-col sm:flex-row justify-between gap-8 w-full">
+                <FormField
+                  control={form.control}
+                  name="purpose"
+                  render={({ field }) => (
+                    <FormItem className="flex-1">
+                      <FormLabel>Mục đích hẹn</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Nhập mục đích hẹn"
+                          className="resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="notes"
+                  render={({ field }) => (
+                    <FormItem className="flex-1">
+                      <FormLabel>Ghi chú</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Nhập ghi chú nếu có"
+                          className="resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
               <DrawerFooter className="sm:flex sm:justify-end font-semibold">
                 <Button
                   type="submit"

@@ -39,7 +39,7 @@ export default function AppointmentDialog({
     <div className="flex flex-col space-y-2">
       <div className="flex items-center space-x-2 font-semibold">
         <div className="text-indigo-400">{icon}</div>
-        <span className="text-zinc-800">{label}:</span>
+        <span className="text-zinc-800 w-1/4 sm:w-1/5">{label}:</span>
         {label === "Trạng thái" ? (
           <Badge
             className={`text-base px-3 py-1 ${getStatusColor(

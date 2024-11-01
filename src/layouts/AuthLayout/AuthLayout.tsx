@@ -6,7 +6,7 @@ import RootFooter from "@/components/RootFooter/RootFooter";
 const RootLayout = () => {
   return (
     <div className="flex flex-col min-h-screen min-w-full bg-gray-100">
-      <header className="z-10 p-2 sm:p-4">
+      <header className="z-10">
         <AuthNavBar />
       </header>
       <main className="flex-grow p-2 sm:p-4">

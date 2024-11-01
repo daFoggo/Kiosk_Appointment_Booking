@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 
-import { navbarVariants, leftSideVariants} from "./motion";
+import { navbarVariants, leftSideVariants } from "./motion";
 
 const AuthNavBar = () => {
   const navigate = useNavigate();
 
   return (
     <motion.div
-      className="flex justify-between items-center font-inter font-semibold"
+      className="flex justify-between items-center font-inter font-semibold p-2 bg-white border-b shadow-sm"
       initial="hidden"
       animate="visible"
       variants={navbarVariants}
@@ -45,8 +45,6 @@ const AuthNavBar = () => {
           Kiosk appointment
         </Button>
       </motion.div>
-
-
     </motion.div>
   );
 };

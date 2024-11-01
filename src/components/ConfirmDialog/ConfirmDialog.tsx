@@ -43,9 +43,9 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px] font-inter">
+      <DialogContent className="max-w-[95%] sm:max-w-[425px] rounded-lg font-inter">
         <DialogHeader>
-          <DialogTitle className="font-semibold text-violet-400">
+          <DialogTitle className="font-semibold text-indigo-400">
             {title}
           </DialogTitle>
           <DialogDescription className="py-4 font-semibold">
@@ -56,14 +56,14 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
           <Button
             variant="outline"
             onClick={onClose}
-            className="flex-1 border-violet-400 bg-violet-50 text-violet-400 hover:text-violet-500 hover:bg-violet-100 font-semibold"
+            className="flex-1 border-indigo-400 bg-violet-50 text-indigo-400 hover:text-indigo-500 hover:bg-violet-100 font-semibold"
           >
             {cancelText}
           </Button>
           <Button
             variant={confirmVariant}
             onClick={handleConfirm}
-            className="flex-1  bg-violet-400 hover:text-violet-50 hover:bg-violet-500 font-semibold"
+            className="flex-1  bg-indigo-400 hover:text-violet-50 hover:bg-indigotext-indigo-500 font-semibold"
           >
             {confirmText}
           </Button>

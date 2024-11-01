@@ -26,7 +26,7 @@ const AppointmentCalendar = ({
 }: IAppointmentCalendarProps) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedappointment, setSelectedappointment] =
-    useState<IAppointment | null>(null);
+    useState<IAppointment>();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [viewMode, setViewMode] = useState("week");
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -252,9 +252,7 @@ const AppointmentCalendar = ({
           </Button>
         </div>
       </CardHeader>
-
       <Separator />
-
       <CardContent className="p-4">
         <Tabs value={viewMode} onValueChange={setViewMode} className="w-full">
           <TabsList className="w-full mb-4">
@@ -276,16 +274,13 @@ const AppointmentCalendar = ({
           </AnimatePresence>
         </Tabs>
       </CardContent>
-
-      <AnimatePresence>
-        {isDialogOpen && selectedappointment && (
-          <AppointmentDialog
-            selectedappointment={selectedappointment}
-            isDialogOpen={isDialogOpen}
-            setIsDialogOpen={setIsDialogOpen}
-          />
-        )}
-      </AnimatePresence>
+      {selectedappointment && (
+        <AppointmentDialog
+          selectedappointment={selectedappointment}
+          isDialogOpen={isDialogOpen}
+          setIsDialogOpen={setIsDialogOpen}
+        />
+      )}
     </Card>
   );
 };

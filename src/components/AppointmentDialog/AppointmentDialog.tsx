@@ -1,45 +1,73 @@
-'use client'
+"use client";
 
-import { useState } from "react"
-import { Clock, User, Building2, FileText, MessageCircle, Mail, Phone, Network, LoaderCircle, CheckCircle, Trash2, Edit, ChevronDown, ChevronUp } from "lucide-react"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import { Badge } from "@/components/ui/badge"
-import AppointmentQR from "../AppointmentQR/AppointmentQR"
-import ConfirmDialog from "../ConfirmDialog/ConfirmDialog"
-import { getStatusColor } from "@/utils/Helper/AppointmentCalendar/helper"
-import { IAppointmentDialogProps } from "@/models/AppointmentDialog/type"
+import { useState } from "react";
+import {
+  Clock,
+  User,
+  Building2,
+  FileText,
+  MessageCircle,
+  Mail,
+  Phone,
+  Network,
+  LoaderCircle,
+  CheckCircle,
+  Trash2,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
+import AppointmentQR from "../AppointmentQR/AppointmentQR";
+import ConfirmDialog from "../ConfirmDialog/ConfirmDialog";
+import { getStatusColor } from "@/utils/Helper/AppointmentCalendar/helper";
+import { IAppointmentDialogProps } from "@/models/AppointmentDialog/type";
 
 export default function AppointmentDialog({
   selectedappointment,
   isDialogOpen,
   setIsDialogOpen,
 }: IAppointmentDialogProps) {
-  const [isEditting, setIsEditting] = useState(false)
-  const [isDeleteConfirm, setIsDeleteConfirm] = useState(false)
-  const [isMarkConfirm, setIsMarkConfirm] = useState(false)
-  const [isPurposeExpanded, setIsPurposeExpanded] = useState(false)
-  const [isNoteExpanded, setIsNoteExpanded] = useState(false)
-
-  const handleEdit = () => {
-    console.log("Edit appointment")
-  }
+  const [isDeleteConfirm, setIsDeleteConfirm] = useState(false);
+  const [isMarkConfirm, setIsMarkConfirm] = useState(false);
+  const [isPurposeExpanded, setIsPurposeExpanded] = useState(false);
+  const [isNoteExpanded, setIsNoteExpanded] = useState(false);
 
   const handleDelete = () => {
-    console.log("Delete appointment")
-  }
+    console.log("Delete appointment");
+  };
 
   const handleMarkAsCompleted = () => {
-    console.log("Mark appointment as completed")
-  }
+    console.log("Mark appointment as completed");
+  };
 
-  const renderField = (icon: React.ReactNode, label: string, value: string, isExpandable = false, isExpanded = false, onToggle?: () => void) => (
-    <div className="flex flex-col space-y-2">
-      <div className="flex items-center space-x-2 font-semibold">
+  const renderField = (
+    icon: React.ReactNode,
+    label: string,
+    value: string,
+    isExpandable = false,
+    isExpanded = false,
+    onToggle?: () => void
+  ) => (
+    <div className="flex flex-col space-y-2 w-full">
+      <div className="flex items-center space-x-2 font-semibold w-full">
         <div className="text-indigo-400">{icon}</div>
-        <span className="text-zinc-800 w-1/4 sm:w-1/5">{label}:</span>
+        <span className="text-zinc-800 w-1/4">{label}:</span>
         {label === "Trạng thái" ? (
           <Badge
             className={`text-base px-3 py-1 ${getStatusColor(
@@ -57,28 +85,41 @@ export default function AppointmentDialog({
               : value}
           </Badge>
         ) : isExpandable ? (
-          <Button variant="ghost" size="sm" onClick={onToggle} className="p-0 h-6">
-            {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={onToggle}
+            className="p-0 h-6"
+          >
+            {isExpanded ? (
+              <ChevronUp className="h-4 w-4" />
+            ) : (
+              <ChevronDown className="h-4 w-4" />
+            )}
           </Button>
         ) : (
           <span>{value}</span>
         )}
       </div>
       {isExpandable && (
-        <div className={`pl-7 ${isExpanded ? 'block' : 'hidden'}`}>
+        <div className={`pl-7 ${isExpanded ? "block" : "hidden"}`}>
           <p className="text-sm text-gray-600 whitespace-pre-wrap">{value}</p>
         </div>
       )}
     </div>
-  )
+  );
 
   return (
     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-      <DialogContent className="max-w-[95%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] max-h-[95%] sm:h-auto rounded-xl p-4 sm:p-6 font-inter overflow-y-auto">
+      <DialogContent
+        className="max-w-4xl w-[95vw] max-h-[95vh] rounded-xl overflow-y-auto font-inter"
+        onOpenAutoFocus={(e) => e?.preventDefault()}
+      >
         <DialogHeader className="flex flex-col sm:flex-row justify-between items-start sm:pr-6 sm:items-center space-y-4 sm:space-y-0">
           <DialogTitle className="text-2xl text-indigo-400">
             Chi tiết cuộc hẹn
           </DialogTitle>
+          <DialogDescription></DialogDescription>
           <div className="flex space-x-2">
             <TooltipProvider delayDuration={100}>
               <Tooltip>
@@ -86,15 +127,13 @@ export default function AppointmentDialog({
                   <Button
                     variant="outline"
                     size="icon"
-                    onClick={() => setIsEditting(true)}
-                    className="border-transparent rounded-full text-violet-400 hover:bg-violet-50 hover:text-violet-500"
+                    onClick={() => setIsMarkConfirm(true)}
+                    className="border-transparent rounded-full text-emerald-400 hover:bg-emerald-50 hover:text-emerald-500"
                   >
-                    <Edit className="h-4 w-4 font-semibold" />
+                    <CheckCircle className="h-4 w-4 font-semibold" />
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent side="bottom">
-                  <p>Chỉnh sửa</p>
-                </TooltipContent>
+                <TooltipContent side="bottom">Hoàn thành</TooltipContent>
               </Tooltip>
             </TooltipProvider>
             <TooltipProvider delayDuration={100}>
@@ -109,33 +148,14 @@ export default function AppointmentDialog({
                     <Trash2 className="h-4 w-4 font-semibold" />
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent side="bottom">
-                  <p>Xóa</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider delayDuration={100}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => setIsMarkConfirm(true)}
-                    className="border-transparent rounded-full text-emerald-400 hover:bg-emerald-50 hover:text-emerald-500"
-                  >
-                    <CheckCircle className="h-4 w-4 font-semibold" />
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent side="bottom">
-                  <p>Hoàn thành</p>
-                </TooltipContent>
+                <TooltipContent side="bottom">Xóa</TooltipContent>
               </Tooltip>
             </TooltipProvider>
           </div>
         </DialogHeader>
         <Separator className="mb-4" />
         <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-6">
-          <DialogDescription className="flex-1 space-y-4">
+          <div className="flex-1 space-y-4 w-full">
             {renderField(
               <Building2 className="h-5 w-5" />,
               "Phòng ban",
@@ -199,7 +219,7 @@ export default function AppointmentDialog({
                 )}
               </div>
             </div>
-          </DialogDescription>
+          </div>
           <Separator orientation="vertical" className="hidden md:block" />
           <Separator orientation="horizontal" className="block md:hidden" />
           <div className="flex-1">
@@ -240,5 +260,5 @@ export default function AppointmentDialog({
         />
       )}
     </Dialog>
-  )
+  );
 }

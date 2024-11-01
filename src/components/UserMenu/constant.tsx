@@ -1,6 +1,7 @@
 export const user = {
   name: "Nguyễn Trường Giang",
   username: "foggo",
+  phoneNumber: "0987654321",
   dob: "14-11-2005",
   job: "Sinh viên",
   company: "PTIT",
